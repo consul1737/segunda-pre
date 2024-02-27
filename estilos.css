@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    box-shadow: inset 0px -3px 2px 0px #00000017;
+    justify-content: center;
+}
+
+.navegacion ul li {
+    margin: 0 10px;
+    margin-bottom: 6px;
+}
+
+.navegacion a {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navegacion a img {
+    width: 50px;
+    margin: 10px;
+}
+
+.navegacion ul li a {
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.sliderTamaño {
+    width: 100%; /* Cambiado de max-width a width */
+    margin: auto;
+}
+
+.index-h2{
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    font-size: 10px;
+    margin: 10px 2px 2px 2px;
+}
+
+.section1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 400px);
+    grid-template-areas:
+        "img-1"
+        "img-2"
+        "img-3"
+        "img-4"
+        "img-5";
+    max-width: 900px; /* Ajustado el ancho máximo al 100% para adaptarse al tamaño de la pantalla */
+    margin: auto;
+
+}
+.img-1 {
+    grid-area: img-1;
+    background-image: url(./Resourse/5.png);
+    background-size: cover;
+    color: white;
+}
+
+.img-2 {
+    grid-area: img-2;
+    background-image: url(./Resourse/1.png);
+    background-size: cover;
+    color: white;
+}
+
+.img-3 {
+    grid-area: img-3;
+    background-image: url(./Resourse/2.png);
+    background-size: cover;
+    color: white;
+}
+
+.img-4 {
+    grid-area: img-4;
+    background-image: url(./Resourse/3.png);
+    background-size: cover;
+    color: white;
+}
+
+.img-5 {
+    grid-area: img-5;
+    background-image: url(./Resourse/4.png);
+    background-size: cover;
+    color: white;
+}
+
+article {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    background-color: #ffffef;
+}
+
+/* Estrategia mobile first */
+@media (min-width: 700px) {
+    .section1 {  
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr; /* Cambiado a repeat(5, 1fr) para dispositivos más grandes */
+        grid-template-areas:
+        "img-1 img-1 img-2 img-3"
+        "img-1 img-1 img-4 img-5";  /* Ajustado el diseño de las áreas para cinco columnas */
+        
+    }   
+}
+@media (min-width:700px){
+    article{
+        border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    background-color: #ffffef;
+    height: 400px;
+    background-size:cover;
+
+    }
+}
+
+
