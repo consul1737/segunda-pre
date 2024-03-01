@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .navegacion ul {
@@ -17,8 +18,9 @@
     align-items: center;
     margin-bottom: 0;
     flex-wrap: wrap;
-    box-shadow: inset 0px -3px 2px 0px #00000017;
+    box-shadow: 0px 1px 2px 0px #00000017;
     justify-content: center;
+    width: 100vw;
 }
 
 .navegacion ul li {
@@ -49,6 +51,7 @@
 
 .index-h2{
     text-align: center;
+    font-family:"Roboto Condensed", sans-serif ;
 }
 
 h1 {
@@ -63,83 +66,147 @@ p {
     margin: 10px 2px 2px 2px;
 }
 
+
+
 .section1 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 400px);
     grid-template-areas:
-        "img-1"
         "img-2"
         "img-3"
         "img-4"
         "img-5";
     max-width: 900px; /* Ajustado el ancho máximo al 100% para adaptarse al tamaño de la pantalla */
     margin: auto;
-
+   
 }
-.img-1 {
-    grid-area: img-1;
-    background-image: url(./Resourse/5.png);
-    background-size: cover;
-    color: white;
+
+.grid{
+    display: none;
 }
 
 .img-2 {
     grid-area: img-2;
-    background-image: url(./Resourse/1.png);
-    background-size: cover;
     color: white;
-}
+    background-image: url(./Resourse/4.png);
+    background-size: cover;
+    
+}  
+  
 
 .img-3 {
     grid-area: img-3;
-    background-image: url(./Resourse/2.png);
-    background-size: cover;
     color: white;
+    background-image: url(./Resourse/5.png);
+    background-size: cover;
+    object-fit: cover;
+ 
+    
 }
 
 .img-4 {
     grid-area: img-4;
-    background-image: url(./Resourse/3.png);
-    background-size: cover;
     color: white;
+    background-image: url(./Resourse/2.png);
+    background-size: cover;
+    
 }
 
 .img-5 {
     grid-area: img-5;
-    background-image: url(./Resourse/4.png);
-    background-size: cover;
+
     color: white;
+    background-image: url(./Resourse/3.png);
+    background-size: cover;
+    
 }
 
-article {
-    border: 1px solid black;
-    margin: 20px;
-    padding: 10px;
-    background-color: #ffffef;
+.formulario-contacto{
+    width: 350px;
+    margin: auto;
+}
+
+.main-venta{
+    margin: auto;
+   
+}
+.main-venta h1{
+    text-align: center;
+}
+
+.grilla-venta div{
+    display: flex;
+    justify-content: center;
+}
+.grilla-venta img{
+    width: 320px;
+    margin-top: 10px;
+}
+.video-iframe{
+    width: 320px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
 }
 
 /* Estrategia mobile first */
-@media (min-width: 700px) {
-    .section1 {  
+@media (min-width: 768px) {
+    .section1 {
+        display: grid; 
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr; /* Cambiado a repeat(5, 1fr) para dispositivos más grandes */
-        grid-template-areas:
-        "img-1 img-1 img-2 img-3"
-        "img-1 img-1 img-4 img-5";  /* Ajustado el diseño de las áreas para cinco columnas */
+        grid-template-rows: repeat(1, 300px);
+        gap: 5px;
+        grid-template-areas: 
+     "img-2 img-3 img-4 img-5"; 
+        /* max-width: 400px; */
         
-    }   
+   
 }
-@media (min-width:700px){
-    article{
-        border: 1px solid black;
-    margin: 20px;
-    padding: 10px;
-    background-color: #ffffef;
-    height: 400px;
-    background-size:cover;
+}
 
+@media (min-width:768px){
+  
+    .grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    .grid img{ 
+         width: 898px;
+         margin: 5px;
+         margin-top: 20px;
+    }
+   
+}
+@media(min-width:479px){
+    .grilla-venta{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        max-width: 630px;
+        margin: auto;
+       
+    }
+    .grilla-venta img{
+        max-width: 200px;
+    }
+    .main-venta{
+        min-width: 335px;
     }
 }
+@media (min-width:479){
+    .h1-venta{
+        text-align: center;
+    }
+   
+}
 
+@media (min-width:479px){
+    .video-iframe{
+        width: 635px;
+        height: 350px;
+        margin-top: 20px;
+      
+    }
+}
 
